@@ -3,10 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26171E77247EF4BB00B4E67B /* WorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26171E76247EF4BB00B4E67B /* WorkView.swift */; };
+		26171E79247EF4C700B4E67B /* WorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26171E78247EF4C700B4E67B /* WorkViewModel.swift */; };
+		268BE23924AFA31900AF05CD /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268BE22824AFA30A00AF05CD /* RealmSwift.framework */; platformFilter = ios; };
+		268BE23A24AFA31900AF05CD /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 268BE22824AFA30A00AF05CD /* RealmSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		26A117FE24C4BBE700F17256 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A117FD24C4BBE700F17256 /* IntExtensions.swift */; };
+		26D86D8B247EF9440032139E /* PublishersExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D86D8A247EF9440032139E /* PublishersExtension.swift */; };
+		26D86D8D247EF9560032139E /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D86D8C247EF9560032139E /* NotificationExtension.swift */; };
+		26DBAD8E247ABD9600BC5E51 /* AddIntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DBAD8D247ABD9600BC5E51 /* AddIntervalView.swift */; };
+		26F31A81247E74FB009A339E /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F31A80247E74FB009A339E /* WorkoutDetailView.swift */; };
+		26F31A83247E7509009A339E /* WorkoutDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F31A82247E7509009A339E /* WorkoutDetailViewModel.swift */; };
+		26F8F4DB247D7CB100412F39 /* AddIntervalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F8F4DA247D7CB100412F39 /* AddIntervalViewModel.swift */; };
 		26FB42EE24781734008BA935 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB42ED24781734008BA935 /* AppDelegate.swift */; };
 		26FB42F024781734008BA935 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB42EF24781734008BA935 /* SceneDelegate.swift */; };
 		26FB42F224781734008BA935 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB42F124781734008BA935 /* ContentView.swift */; };
@@ -14,9 +25,98 @@
 		26FB42F724781736008BA935 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FB42F624781736008BA935 /* Preview Assets.xcassets */; };
 		26FB42FA24781736008BA935 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FB42F824781736008BA935 /* LaunchScreen.storyboard */; };
 		26FB430524781736008BA935 /* RunIntervalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB430424781736008BA935 /* RunIntervalsTests.swift */; };
+		26FB43112478176B008BA935 /* WorkoutsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB43102478176B008BA935 /* WorkoutsListViewModel.swift */; };
+		26FB4318247817EA008BA935 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB4317247817EA008BA935 /* Workout.swift */; };
+		26FB432224782180008BA935 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB432124782180008BA935 /* System.swift */; };
+		26FB4324247821AB008BA935 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB4323247821AB008BA935 /* Feedback.swift */; };
+		26FB4327247824CD008BA935 /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB4326247824CD008BA935 /* RealmStore.swift */; };
+		26FB432924782520008BA935 /* WorkoutsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB432824782520008BA935 /* WorkoutsDB.swift */; };
+		26FB432D24783071008BA935 /* WorkoutsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB432C24783071008BA935 /* WorkoutsListView.swift */; };
+		26FB432F247831C0008BA935 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB432E247831C0008BA935 /* ViewExtensions.swift */; };
+		26FB4332247832CE008BA935 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB4331247832CE008BA935 /* Spinner.swift */; };
+		26FB433524783879008BA935 /* AddWorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB433424783879008BA935 /* AddWorkoutViewModel.swift */; };
+		26FB433724783E1C008BA935 /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB433624783E1C008BA935 /* AddWorkoutView.swift */; };
+		26FB433924794291008BA935 /* ObservableObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB433824794291008BA935 /* ObservableObjectExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		268BE22324AFA30A00AF05CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268BE21324AFA30A00AF05CD /* Realm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D659ED91BE04556006515A0;
+			remoteInfo = Realm;
+		};
+		268BE22524AFA30A00AF05CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268BE21324AFA30A00AF05CD /* Realm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5DD755CF1BE056DE002800DA;
+			remoteInfo = "Realm iOS static";
+		};
+		268BE22724AFA30A00AF05CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268BE21324AFA30A00AF05CD /* Realm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D660FCC1BE98C560021E04F;
+			remoteInfo = RealmSwift;
+		};
+		268BE22924AFA30A00AF05CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268BE21324AFA30A00AF05CD /* Realm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8D89BA31955FC6D00CF2B9A;
+			remoteInfo = Tests;
+		};
+		268BE22B24AFA30A00AF05CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268BE21324AFA30A00AF05CD /* Realm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5D660FD81BE98C7C0021E04F;
+			remoteInfo = "RealmSwift Tests";
+		};
+		268BE22D24AFA30A00AF05CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268BE21324AFA30A00AF05CD /* Realm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8267FED1D90B79000E001C7;
+			remoteInfo = ObjectServerTests;
+		};
+		268BE22F24AFA30A00AF05CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268BE21324AFA30A00AF05CD /* Realm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E856D1DF195614A400FB2FCF;
+			remoteInfo = "iOS static tests";
+		};
+		268BE23124AFA30A00AF05CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268BE21324AFA30A00AF05CD /* Realm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F1A5E721992EB7400F45F4C;
+			remoteInfo = TestHost;
+		};
+		268BE23324AFA30A00AF05CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268BE21324AFA30A00AF05CD /* Realm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F9D91872152D42F00474F09;
+			remoteInfo = "TestHost static";
+		};
+		268BE23524AFA30A00AF05CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268BE21324AFA30A00AF05CD /* Realm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F558C9C22C29CAF002F0F30;
+			remoteInfo = RealmTestSupport;
+		};
+		268BE23724AFA30A00AF05CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268BE21324AFA30A00AF05CD /* Realm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3FE5819122C2CA2E00BA10E7;
+			remoteInfo = "RealmTestSupport static";
+		};
 		26FB430124781736008BA935 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 26FB42E224781734008BA935 /* Project object */;
@@ -26,7 +126,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		268BE23B24AFA31A00AF05CD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				268BE23A24AFA31900AF05CD /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		26171E76247EF4BB00B4E67B /* WorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkView.swift; sourceTree = "<group>"; };
+		26171E78247EF4C700B4E67B /* WorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewModel.swift; sourceTree = "<group>"; };
+		268BE21324AFA30A00AF05CD /* Realm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Realm.xcodeproj; path = "../realm-cocoa/Realm.xcodeproj"; sourceTree = "<group>"; };
+		26A117FC24C4BBD500F17256 /* RunIntervals.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = RunIntervals.entitlements; sourceTree = "<group>"; };
+		26A117FD24C4BBE700F17256 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
+		26D86D8A247EF9440032139E /* PublishersExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishersExtension.swift; sourceTree = "<group>"; };
+		26D86D8C247EF9560032139E /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
+		26DBAD8D247ABD9600BC5E51 /* AddIntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIntervalView.swift; sourceTree = "<group>"; };
+		26F31A80247E74FB009A339E /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
+		26F31A82247E7509009A339E /* WorkoutDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailViewModel.swift; sourceTree = "<group>"; };
+		26F8F4DA247D7CB100412F39 /* AddIntervalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIntervalViewModel.swift; sourceTree = "<group>"; };
 		26FB42EA24781734008BA935 /* RunIntervals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunIntervals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FB42ED24781734008BA935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26FB42EF24781734008BA935 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +163,18 @@
 		26FB430024781736008BA935 /* RunIntervalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunIntervalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FB430424781736008BA935 /* RunIntervalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunIntervalsTests.swift; sourceTree = "<group>"; };
 		26FB430624781736008BA935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26FB43102478176B008BA935 /* WorkoutsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsListViewModel.swift; sourceTree = "<group>"; };
+		26FB4317247817EA008BA935 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		26FB432124782180008BA935 /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		26FB4323247821AB008BA935 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		26FB4326247824CD008BA935 /* RealmStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
+		26FB432824782520008BA935 /* WorkoutsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsDB.swift; sourceTree = "<group>"; };
+		26FB432C24783071008BA935 /* WorkoutsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsListView.swift; sourceTree = "<group>"; };
+		26FB432E247831C0008BA935 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		26FB4331247832CE008BA935 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		26FB433424783879008BA935 /* AddWorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewModel.swift; sourceTree = "<group>"; };
+		26FB433624783E1C008BA935 /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
+		26FB433824794291008BA935 /* ObservableObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268BE23924AFA31900AF05CD /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +196,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26171E75247EF4AC00B4E67B /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				26171E76247EF4BB00B4E67B /* WorkView.swift */,
+				26171E78247EF4C700B4E67B /* WorkViewModel.swift */,
+			);
+			path = Work;
+			sourceTree = "<group>";
+		};
+		268BE21024AF9FBC00AF05CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		268BE21424AFA30A00AF05CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				268BE22424AFA30A00AF05CD /* Realm.framework */,
+				268BE22624AFA30A00AF05CD /* Realm.framework */,
+				268BE22824AFA30A00AF05CD /* RealmSwift.framework */,
+				268BE22A24AFA30A00AF05CD /* Tests.xctest */,
+				268BE22C24AFA30A00AF05CD /* RealmSwift Tests.xctest */,
+				268BE22E24AFA30A00AF05CD /* ObjectServerTests.xctest */,
+				268BE23024AFA30A00AF05CD /* iOS static tests.xctest */,
+				268BE23224AFA30A00AF05CD /* TestHost.app */,
+				268BE23424AFA30A00AF05CD /* TestHost static.app */,
+				268BE23624AFA30A00AF05CD /* RealmTestSupport.framework */,
+				268BE23824AFA30A00AF05CD /* RealmTestSupport.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26F31A7F247E74E6009A339E /* Workout details */ = {
+			isa = PBXGroup;
+			children = (
+				26F31A80247E74FB009A339E /* WorkoutDetailView.swift */,
+				26F31A82247E7509009A339E /* WorkoutDetailViewModel.swift */,
+			);
+			path = "Workout details";
+			sourceTree = "<group>";
+		};
+		26F8F4DC247D7CB600412F39 /* Add interval */ = {
+			isa = PBXGroup;
+			children = (
+				26DBAD8D247ABD9600BC5E51 /* AddIntervalView.swift */,
+				26F8F4DA247D7CB100412F39 /* AddIntervalViewModel.swift */,
+			);
+			path = "Add interval";
+			sourceTree = "<group>";
+		};
 		26FB42E124781734008BA935 = {
 			isa = PBXGroup;
 			children = (
+				268BE21324AFA30A00AF05CD /* Realm.xcodeproj */,
 				26FB42EC24781734008BA935 /* RunIntervals */,
 				26FB430324781736008BA935 /* RunIntervalsTests */,
 				26FB42EB24781734008BA935 /* Products */,
+				268BE21024AF9FBC00AF05CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +271,16 @@
 		26FB42EC24781734008BA935 /* RunIntervals */ = {
 			isa = PBXGroup;
 			children = (
+				26A117FC24C4BBD500F17256 /* RunIntervals.entitlements */,
+				26FB4323247821AB008BA935 /* Feedback.swift */,
+				26FB432124782180008BA935 /* System.swift */,
+				26FB4330247832BE008BA935 /* UIControls */,
+				26FB43252478249A008BA935 /* Persistence */,
+				26FB432024782172008BA935 /* Extensions */,
+				26FB430F24781752008BA935 /* Workouts List */,
+				26171E75247EF4AC00B4E67B /* Work */,
+				26FB433324783860008BA935 /* Add workout */,
+				26F31A7F247E74E6009A339E /* Workout details */,
 				26FB42ED24781734008BA935 /* AppDelegate.swift */,
 				26FB42EF24781734008BA935 /* SceneDelegate.swift */,
 				26FB42F124781734008BA935 /* ContentView.swift */,
@@ -107,6 +309,55 @@
 			path = RunIntervalsTests;
 			sourceTree = "<group>";
 		};
+		26FB430F24781752008BA935 /* Workouts List */ = {
+			isa = PBXGroup;
+			children = (
+				26FB4317247817EA008BA935 /* Workout.swift */,
+				26FB43102478176B008BA935 /* WorkoutsListViewModel.swift */,
+				26FB432824782520008BA935 /* WorkoutsDB.swift */,
+				26FB432C24783071008BA935 /* WorkoutsListView.swift */,
+			);
+			path = "Workouts List";
+			sourceTree = "<group>";
+		};
+		26FB432024782172008BA935 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				26FB432E247831C0008BA935 /* ViewExtensions.swift */,
+				26FB433824794291008BA935 /* ObservableObjectExtensions.swift */,
+				26D86D8A247EF9440032139E /* PublishersExtension.swift */,
+				26D86D8C247EF9560032139E /* NotificationExtension.swift */,
+				26A117FD24C4BBE700F17256 /* IntExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		26FB43252478249A008BA935 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				26FB4326247824CD008BA935 /* RealmStore.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		26FB4330247832BE008BA935 /* UIControls */ = {
+			isa = PBXGroup;
+			children = (
+				26FB4331247832CE008BA935 /* Spinner.swift */,
+			);
+			path = UIControls;
+			sourceTree = "<group>";
+		};
+		26FB433324783860008BA935 /* Add workout */ = {
+			isa = PBXGroup;
+			children = (
+				26F8F4DC247D7CB600412F39 /* Add interval */,
+				26FB433424783879008BA935 /* AddWorkoutViewModel.swift */,
+				26FB433624783E1C008BA935 /* AddWorkoutView.swift */,
+			);
+			path = "Add workout";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,12 +368,16 @@
 				26FB42E624781734008BA935 /* Sources */,
 				26FB42E724781734008BA935 /* Frameworks */,
 				26FB42E824781734008BA935 /* Resources */,
+				26FB431F24781A94008BA935 /* ShellScript */,
+				268BE23B24AFA31A00AF05CD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = RunIntervals;
+			packageProductDependencies = (
+			);
 			productName = RunIntervals;
 			productReference = 26FB42EA24781734008BA935 /* RunIntervals.app */;
 			productType = "com.apple.product-type.application";
@@ -152,7 +407,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Adriana Elizondo";
 				TargetAttributes = {
 					26FB42E924781734008BA935 = {
@@ -173,8 +428,16 @@
 				Base,
 			);
 			mainGroup = 26FB42E124781734008BA935;
+			packageReferences = (
+			);
 			productRefGroup = 26FB42EB24781734008BA935 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 268BE21424AFA30A00AF05CD /* Products */;
+					ProjectRef = 268BE21324AFA30A00AF05CD /* Realm.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				26FB42E924781734008BA935 /* RunIntervals */,
@@ -182,6 +445,86 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		268BE22424AFA30A00AF05CD /* Realm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Realm.framework;
+			remoteRef = 268BE22324AFA30A00AF05CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		268BE22624AFA30A00AF05CD /* Realm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework.static;
+			path = Realm.framework;
+			remoteRef = 268BE22524AFA30A00AF05CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		268BE22824AFA30A00AF05CD /* RealmSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RealmSwift.framework;
+			remoteRef = 268BE22724AFA30A00AF05CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		268BE22A24AFA30A00AF05CD /* Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.xctest;
+			remoteRef = 268BE22924AFA30A00AF05CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		268BE22C24AFA30A00AF05CD /* RealmSwift Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "RealmSwift Tests.xctest";
+			remoteRef = 268BE22B24AFA30A00AF05CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		268BE22E24AFA30A00AF05CD /* ObjectServerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ObjectServerTests.xctest;
+			remoteRef = 268BE22D24AFA30A00AF05CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		268BE23024AFA30A00AF05CD /* iOS static tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "iOS static tests.xctest";
+			remoteRef = 268BE22F24AFA30A00AF05CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		268BE23224AFA30A00AF05CD /* TestHost.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TestHost.app;
+			remoteRef = 268BE23124AFA30A00AF05CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		268BE23424AFA30A00AF05CD /* TestHost static.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "TestHost static.app";
+			remoteRef = 268BE23324AFA30A00AF05CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		268BE23624AFA30A00AF05CD /* RealmTestSupport.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RealmTestSupport.framework;
+			remoteRef = 268BE23524AFA30A00AF05CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		268BE23824AFA30A00AF05CD /* RealmTestSupport.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RealmTestSupport.framework;
+			remoteRef = 268BE23724AFA30A00AF05CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		26FB42E824781734008BA935 /* Resources */ = {
@@ -203,14 +546,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26FB431F24781A94008BA935 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		26FB42E624781734008BA935 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F31A81247E74FB009A339E /* WorkoutDetailView.swift in Sources */,
+				26DBAD8E247ABD9600BC5E51 /* AddIntervalView.swift in Sources */,
+				26FB432D24783071008BA935 /* WorkoutsListView.swift in Sources */,
+				26FB433724783E1C008BA935 /* AddWorkoutView.swift in Sources */,
+				26FB432224782180008BA935 /* System.swift in Sources */,
+				26D86D8B247EF9440032139E /* PublishersExtension.swift in Sources */,
+				26171E79247EF4C700B4E67B /* WorkViewModel.swift in Sources */,
+				26F31A83247E7509009A339E /* WorkoutDetailViewModel.swift in Sources */,
+				26FB4327247824CD008BA935 /* RealmStore.swift in Sources */,
+				26A117FE24C4BBE700F17256 /* IntExtensions.swift in Sources */,
+				26FB43112478176B008BA935 /* WorkoutsListViewModel.swift in Sources */,
+				26FB4332247832CE008BA935 /* Spinner.swift in Sources */,
 				26FB42EE24781734008BA935 /* AppDelegate.swift in Sources */,
+				26171E77247EF4BB00B4E67B /* WorkView.swift in Sources */,
 				26FB42F024781734008BA935 /* SceneDelegate.swift in Sources */,
+				26FB4318247817EA008BA935 /* Workout.swift in Sources */,
 				26FB42F224781734008BA935 /* ContentView.swift in Sources */,
+				26FB433524783879008BA935 /* AddWorkoutViewModel.swift in Sources */,
+				26D86D8D247EF9560032139E /* NotificationExtension.swift in Sources */,
+				26FB4324247821AB008BA935 /* Feedback.swift in Sources */,
+				26FB432F247831C0008BA935 /* ViewExtensions.swift in Sources */,
+				26F8F4DB247D7CB100412F39 /* AddIntervalViewModel.swift in Sources */,
+				26FB433924794291008BA935 /* ObservableObjectExtensions.swift in Sources */,
+				26FB432924782520008BA935 /* WorkoutsDB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +654,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -294,7 +679,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -330,6 +715,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -348,7 +734,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -362,17 +748,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RunIntervals/RunIntervals.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RunIntervals/Preview Content\"";
 				DEVELOPMENT_TEAM = W3RCCUG568;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RunIntervals/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ae.RunIntervals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -382,17 +772,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RunIntervals/RunIntervals.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RunIntervals/Preview Content\"";
 				DEVELOPMENT_TEAM = W3RCCUG568;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RunIntervals/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ae.RunIntervals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -402,11 +795,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W3RCCUG568;
 				INFOPLIST_FILE = RunIntervalsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,11 +816,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W3RCCUG568;
 				INFOPLIST_FILE = RunIntervalsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

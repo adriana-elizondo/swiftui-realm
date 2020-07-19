@@ -6,4 +6,9 @@
 //  Copyright © 2020 Adriana Elizondo. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
+extension View {
+    func eraseToAnyView() -> AnyView {
+        return AnyView(self)
+    }
+}
